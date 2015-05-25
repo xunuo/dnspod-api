@@ -12,17 +12,26 @@ A dnspod api for nodejs.
 
 - server for dnspod.com or dnspod.cn.
 
-
 ## DNSPOD API documents
 
+There actions and params you can find.
+
 > Dnspod.cn : https://www.dnspod.cn/docs  
-> Dnspod.com : https://www.dnspod.com/docs
+> Dnspod.com : https://www.dnspod.com/docs  
 
 ## How to get token
+
+Before everything you must get the login token.  
 
 > Dnspod.cn : https://support.dnspod.cn/Kb/showarticle/tsid/227  
 > Dnspod.com : https://www.dnspod.com/docs/info.html#get-the-user-token
 
+
+## Install
+
+```sh
+npm install dnspod-api -g
+```
 
 ## Useage
 
