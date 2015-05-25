@@ -54,15 +54,18 @@ dnspod-api -s 'dnspod.cn' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a '
 
 ```js
 
+// require
+var DnspodApi = require('dnspod-api');
+
 // new dnspodApi instance
 var dnspodApi =  new DnspodApi({
-    server : 'dnspod.cn', // dnspod.com (default) | dnspod.cn
+    server : 'dnspod.cn', // which server you are using . dnspod.com (default) | dnspod.cn
     token : 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // your login token, you can find how to get this at the top.
 });
 
 // do actions
 dnspodApi.do({
-    action : 'Domain.List'
+    action : 'Domain.List' // the api action
 })
 .then(
     // success
@@ -72,6 +75,7 @@ dnspodApi.do({
         
         return dnspodApi.do({
             action : 'Record.List',
+            // the api params
             params : {
                 domain : 'your-domain.com',
                 sub_domain : '@'

@@ -7,10 +7,10 @@ var argv = require('commander'),
 
 argv
   .version(packageJson.version)
-  .option('-s, --server [server]', 'server type.')
-  .option('-t, --token [token]', 'dnspod login token.')
-  .option('-a, --action [action]', 'server domain.')
-  .option('-p, --params [params]', 'server port.')
+  .option('-s, --server [server]', 'Which server you are using . (dnspod.com/dnspod.cn)')
+  .option('-t, --token [token]', 'Dnspod login token. (xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)')
+  .option('-a, --action [action]', 'The API action.(Record.List/Domain.List etc.)')
+  .option('-p, --params [params]', 'The API params.(domain/subDomain etc.)')
   .parse(process.argv);
 
 
