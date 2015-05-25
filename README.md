@@ -1,4 +1,5 @@
 # dnspod-api
+
 A dnspod api for nodejs.
 
 ## Features
@@ -10,6 +11,17 @@ A dnspod api for nodejs.
 - use login token replace user & password auth.
 
 - server for dnspod.com or dnspod.cn.
+
+
+## DNSPOD API documents
+
+> Dnspod.cn : https://www.dnspod.cn/docs  
+> Dnspod.com : https://www.dnspod.com/docs
+
+## How to get token
+
+> Dnspod.cn : https://support.dnspod.cn/Kb/showarticle/tsid/227  
+> Dnspod.com : https://www.dnspod.com/docs/info.html#get-the-user-token
 
 
 ## Useage
@@ -72,12 +84,3 @@ dnspodApi.do({
 )
 //.then ....
 ```
-
-
-## DNSPOD API documents
-> Dnspod.cn : https://www.dnspod.cn/docs  
-> Dnspod.com : https://www.dnspod.com/docs
-
-## How to get token
-> Dnspod.cn : https://support.dnspod.cn/Kb/showarticle/tsid/227  
-> Dnspod.com : https://www.dnspod.com/docs/info.html#get-the-user-token
