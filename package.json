@@ -1,6 +1,6 @@
 {
   "name": "dnspod-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A DPSPOD API for NodeJS.",
   "author": "xunuo <i@xunuo.com>",
   "license": "MIT",
