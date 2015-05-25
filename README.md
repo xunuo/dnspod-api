@@ -57,7 +57,7 @@ dnspod-api -s 'dnspod.cn' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a '
 // new dnspodApi instance
 var dnspodApi =  new DnspodApi({
     server : 'dnspod.cn', // dnspod.com (default) | dnspod.cn
-    token : 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // your login token, you can find how to get token in then bottom.
+    token : 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // your login token, you can find how to get token in then top.
 });
 
 // do actions
