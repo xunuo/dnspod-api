@@ -4,13 +4,14 @@ A dnspod api for nodejs.
 
 ## Features
 
-- multiple-instance.
+- For dnspod.com or dnspod.cn.
 
-- promise.
+- Multiple-instance.
 
-- use login token replace user & password auth.
+- Implementation by promise.
 
-- server for dnspod.com or dnspod.cn.
+- Use login token replace user & password auth.
+
 
 ## DNSPOD API documents
 
@@ -35,7 +36,7 @@ npm install dnspod-api -g
 
 ## Useage
 
-### BIN
+### BIN Example
 ```sh
 dnspod-api --token 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' --action 'Domain.List'
 ```
@@ -46,7 +47,7 @@ or
 dnspod-api -u 'https://api.dnspod.com' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a 'Record.List' -p '{"domain": "hateip.com", "sub_domain": "@"}'
 ```
 
-if the token string have `$`, please replace it with `\$`.
+**Warning:** If the token string have `$`, please replace it with `\$`.
 
 ### API Example
 
