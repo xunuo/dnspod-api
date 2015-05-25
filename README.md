@@ -21,7 +21,7 @@ The actions and params that you can find.
 
 ## How to get token
 
-Before everything you must get the login token.  
+First of all, you should get the login token.  
 
 > Dnspod.cn : https://support.dnspod.cn/Kb/showarticle/tsid/227  
 > Dnspod.com : https://www.dnspod.com/docs/info.html#get-the-user-token
@@ -46,7 +46,7 @@ or
 dnspod-api -u 'https://api.dnspod.com' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a 'Record.List' -p '{"domain": "hateip.com", "sub_domain": "@"}'
 ```
 
-please replace `$` with `\$` in token string.
+if the token string have `$`, please replace it with `\$`.
 
 ### API Example
 
