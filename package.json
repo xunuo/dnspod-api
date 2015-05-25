@@ -1,0 +1,23 @@
+{
+  "name": "dnspod-api",
+  "version": "0.0.1",
+  "description": "A DPSPOD API for NodeJS.",
+  "author": "xunuo <i@xunuo.com>",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "dnspod",
+    "api"
+  ],
+  "repository": "xunuo/dnspod-api",
+  "bin": {
+    "dnspod-api": "./cli.js"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "merge": "^1.2.0",
+    "q": "^1.4.1",
+    "request": "^2.55.0"
+  },
+  "devDependencies": {}
+}
