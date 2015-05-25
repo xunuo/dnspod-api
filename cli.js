@@ -7,7 +7,7 @@ var argv = require('commander'),
 
 argv
   .version(packageJson.version)
-  .option('-u, --url [url]', 'server url.')
+  .option('-s, --server [server]', 'server type.')
   .option('-t, --token [token]', 'dnspod login token.')
   .option('-a, --action [action]', 'server domain.')
   .option('-p, --params [params]', 'server port.')
@@ -16,11 +16,9 @@ argv
 
 // define configs
 var config = {
+    server : argv.server,
     token : argv.token
 };
-if(argv.url){
-    config.url = argv.url;
-}
 
 // init
 var dnspodApi =  new DnspodApi(config);

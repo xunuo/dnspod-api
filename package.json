@@ -1,7 +1,7 @@
 {
   "name": "dnspod-api",
-  "version": "1.0.4",
-  "description": "A DPSPOD API for NodeJS.",
+  "version": "1.0.6",
+  "description": "A DPSPOD API for NodeJS (使用最新认证方式，支持DNSPOD国际版和国内版).",
   "author": "xunuo <i@xunuo.com>",
   "license": "MIT",
   "keywords": [

@@ -1,6 +1,7 @@
 # dnspod-api
 
-A dnspod api for nodejs.
+A dnspod api for nodejs. 
+(使用最新认证方式，兼容DNSPOD国际版和国内版)
 
 ## Features
 
@@ -44,7 +45,7 @@ dnspod-api --token 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' --action 'Doma
 or  
 
 ```sh
-dnspod-api -u 'https://api.dnspod.com' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a 'Record.List' -p '{"domain": "hateip.com", "sub_domain": "@"}'
+dnspod-api -s 'dnspod.cn' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -a 'Record.List' -p '{"domain": "your-domain.com", "sub_domain": "@"}'
 ```
 
 **Warning:** If the token string have `$`, please replace it with `\$`.
@@ -55,7 +56,7 @@ dnspod-api -u 'https://api.dnspod.com' -t 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 // new dnspodApi instance
 var dnspodApi =  new DnspodApi({
-    url : 'https://dnsapi.cn', // https://dnsapi.cn (default) | https://api.dnspod.com
+    server : 'dnspod.cn', // dnspod.com (default) | dnspod.cn
     token : 'xxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' // your login token, you can find how to get token in then bottom.
 });
 

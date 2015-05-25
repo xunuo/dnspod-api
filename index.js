@@ -8,15 +8,28 @@ var DnspodApi = function(config){
     
     var 
         defaultConfig = {
-            url : 'https://dnsapi.cn', // https://api.dnspod.com | https://dnsapi.cn
+            
+            // defaults
+            server : 'dnspod.com', // dnspod.com (default) | dnspod.cn
             token : null, // xxxxx,xxxxxxxxxx
+            
+            // post settings
             format: 'json',
             error_on_empty: 'yes',
             userAgent : 'Node Dnspod Api'
+            
         },
         config = merge.recursive(true, defaultConfig, config)
         ;
     
+    // set config.url from config.server
+    config.server = config.server ? config.server : 'dnspod.com';
+    
+    if(config.server == 'dnspod.com'){
+        config.url = 'https://api.dnspod.com'
+    }else{
+        config.url = 'https://dnsapi.cn'
+    }
     
     // if no token, show errors.
     if(!config.token){
@@ -43,11 +56,11 @@ var DnspodApi = function(config){
         // console.log(config);
         
         // deal with different between dnspod.com and ddnsapi.cn
-        if(config.url.indexOf('dnsapi.cn') != -1){
+        if(config.server == 'dnspod.com'){
+            args.params.user_token = config.token;
+        }else{
             args.params.login_token = config.token;
             args.params.lang = 'cn';
-        }else{
-            args.params.user_token = config.token;
         }
         
         // define format with config.json
@@ -56,6 +69,7 @@ var DnspodApi = function(config){
         // define error_on_empty with config.error_on_empty
         args.params.error_on_empty = config.error_on_empty
         
+
         request.post({
                 url: config.url + '/' + args.action,
                 headers: {
@@ -74,11 +88,7 @@ var DnspodApi = function(config){
                 
                 if(response.statusCode == 200){
                     
-                    if(callback.status.code == '1'){
-                        deferred.resolve(callback);
-                    }else{
-                        deferred.reject(callback);
-                    }
+                    deferred.resolve(callback);
                     
                 }else{
                     deferred.reject({
