@@ -14,7 +14,7 @@ A dnspod api for nodejs.
 
 ## DNSPOD API documents
 
-There actions and params you can find.
+The actions and params that you can find.
 
 > Dnspod.cn : https://www.dnspod.cn/docs  
 > Dnspod.com : https://www.dnspod.com/docs  
