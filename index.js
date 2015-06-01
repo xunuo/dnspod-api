@@ -81,17 +81,24 @@ var DnspodApi = function(config){
             },
             function(error, response, callback){
                 
+                // retrun the arguments
+                var responseArgs = merge.recursive(true, args);
+                delete responseArgs.token;
+                
                 if(error){
+                    error.responseArgs = responseArgs;
                     deferred.reject(error);
                     return;
                 }
                 
                 if(response.statusCode == 200){
                     
+                    callback.responseArgs = responseArgs;
                     deferred.resolve(callback);
                     
                 }else{
                     deferred.reject({
+                        responseArgs : responseArgs,
                         errorCode : response.statusCode 
                     })
                 }

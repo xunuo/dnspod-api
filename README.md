@@ -91,10 +91,12 @@ dnspodApi.do({
 .then(
     function(recordListData){
         console.log('Record List: ', recordListData);
+        console.log('The Arguments: ', recordListData.args);
     },
     // error
     function(error) {
         console.log(error);
+        console.log('The Arguments: ', error.args);
     }
 )
 //.then ....
