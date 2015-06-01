@@ -83,7 +83,6 @@ var DnspodApi = function(config){
                 
                 // retrun the arguments
                 var responseArgs = merge.recursive(true, args);
-                delete responseArgs.token;
                 
                 if(error){
                     error.args = responseArgs;
